@@ -86,12 +86,12 @@ public class controlador {
     ControladoraPersistencia.guardar_cuentas(cuenta);
 }
 
-    public String ValidaruUsuario(String usuario, String contraseña) {
+    public String ValidaruUsuario(String username, String password) {
             String mensaje="";
             List<Usuario> listaUsuario = ControladoraPersistencia.traerUsuarios();
             for(Usuario usu : listaUsuario){
-               if (usu.getUsername().equals(usuario)) {
-                   if (usu.getPassword().equals(contraseña)){
+               if (usu.getUsername().equals(username)) {
+                   if (usu.getPassword().equals(password)){
                        mensaje = "Usuario y contraseña correctos, bienvenido";
                        
                        Principal princ = new Principal();

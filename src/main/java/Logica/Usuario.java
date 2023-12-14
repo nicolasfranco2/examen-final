@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Usuario implements Serializable {
@@ -17,6 +19,15 @@ public class Usuario implements Serializable {
     private int id;
     private String username;
     private String password;
+
+    public Usuario() {
+    }
+
+    public Usuario(int id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
 
     public int getId() {
         return id;
@@ -42,14 +53,8 @@ public class Usuario implements Serializable {
         this.password = password;
     }
 
-    public Usuario() {
-    }
-
-    public Usuario(int id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-    }
-
-    
 }
+
+   
+    
+

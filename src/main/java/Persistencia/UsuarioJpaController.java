@@ -26,14 +26,13 @@ public class UsuarioJpaController implements Serializable {
         this.emf = emf;
     }
     private EntityManagerFactory emf = null;
-    
-      public  UsuarioJpaController(){
+     UsuarioJpaController() {
       emf = Persistence.createEntityManagerFactory("Parcial3");
-   }
+    }
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-
+    
     public void create(Usuario usuario) {
         EntityManager em = null;
         try {

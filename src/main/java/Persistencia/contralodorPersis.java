@@ -21,7 +21,7 @@ public class contralodorPersis {
     ClienteJpaController clienteJpa = new ClienteJpaController();
     CuentaJpaController cuentaJpa = new CuentaJpaController();
     PersonaJpaController personaJpa = new PersonaJpaController();
-    UsuarioJpaController usuarioJpa = new UsuarioJpaController();
+    UsuarioJpaController  usuarioJpa = new  UsuarioJpaController();
 
     public void guardar_ciudad(Ciudad ciudad) {
         ciudadJpa.create(ciudad);
